@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  invoice_num: 1
+  type: 
+  document_number: 1
+  due_date: 2020-11-07
+  doc_date: 2020-11-07
+  amount: 1.5
+  posting_date: 2020-11-07
+
+two:
+  invoice_num: 1
+  type: 
+  document_number: 1
+  due_date: 2020-11-07
+  doc_date: 2020-11-07
+  amount: 1.5
+  posting_date: 2020-11-07

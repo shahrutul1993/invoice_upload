@@ -1,0 +1,43 @@
+<%= form_with(model: invoice, local: true) do |form| %>
+  <% if invoice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+      <ul>
+      <% invoice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="form-group">
+        <div class="row">
+          <div class="col-sm-4">
+            <% if resource.avatar.attached? %>
+            <%= image_tag resource.avatar style: "width: 200px; display: block" %>
+            <% end %>
+          </div>
+
+          <div class="col-sm-8">
+            <%= f.file_field :avatar %>
+          </div>
+        </div>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+
+t.integer "invoice_num"
+    t.string "type"
+    t.integer "document_number"
+    t.date "due_date"
+    t.date "doc_date"
+    t.float "amount"
+    t.date "posting_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
